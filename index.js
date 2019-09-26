@@ -22,5 +22,5 @@ if (newTime < 12) {
 
 function displayMessage(string) {
   let input = document.getElementById("greeting")
-  inputer.innerText = string
+  input.innerText = string
 }
