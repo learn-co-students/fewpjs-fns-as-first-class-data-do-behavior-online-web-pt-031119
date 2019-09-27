@@ -1,11 +1,31 @@
 /* Given Code, don't edit */
 
-function handleClick(e) {
+const handleClick = (e) => {
   const timeString = document.getElementById('time').value
   displayMessage(greet(timeString))
 }
 
 /* End Given Code, don't edit above here...*/
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+const greet = (timeString) => {
+  const chars = timeString.split(':')
+  const num = parseInt(chars[0], 10) 
+  if (num < 12) {
+    return "Good Morning"
+  } else if (num >= 12 && num <= 17) {      
+    return "Good Afternoon"
+  } else { 
+    return "Good Evening"
+  }
+}
+
+const displayMessage = (str) => {
+  let string = document.getElementById("greeting")
+  string.innerText = str
+}
+
+
+
+
+
+
